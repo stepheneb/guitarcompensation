@@ -1,0 +1,157 @@
+<?xml version="1.0" standalone="no" ?>
+<!DOCTYPE project PUBLIC "-//audacityproject-1.3.0//DTD//EN" "http://audacity.sourceforge.net/xml/audacityproject-1.3.0.dtd" >
+<project xmlns="http://audacity.sourceforge.net/xml/" projname="Daddario-EJ16-2-light-650mm-9070g_data" version="1.3.0" audacityversion="2.2.2" sel0="-0.1300000000" sel1="5.4834240363" vpos="0" h="0.0000000000" zoom="86.1328125000" rate="11025.0" snapto="off" selectionformat="hh:mm:ss + hundredths" frequencyformat="Hz" bandwidthformat="octaves">
+	<tags>
+		<tag name="YEAR" value="2010"/>
+		<tag name="TITLE" value="500 Miles"/>
+		<tag name="ALBUM" value="20100206 Haiti Benefit"/>
+		<tag name="TRACKNUMBER" value="3"/>
+		<tag name="ARTIST" value="Bad Band"/>
+	</tags>
+	<wavetrack name="E4-650" channel="2" linked="0" mute="1" solo="0" height="150" minimized="0" isSelected="1" rate="11025" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="-0.13000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="1433">
+				<waveblock start="0">
+					<simpleblockfile filename="e000029b.au" len="1433" min="-0.350271" max="0.525171" rms="0.203944"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+		<waveclip offset="-0.00002268" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="43450">
+				<waveblock start="0">
+					<simpleblockfile filename="e0000540.au" len="43450" min="-0.190469" max="0.197195" rms="0.051817"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="1">
+				<controlpoint t="0.000000000000" val="1.000000000000"/>
+			</envelope>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="E4-325" channel="2" linked="0" mute="1" solo="0" height="150" minimized="0" isSelected="1" rate="11025" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="47243">
+				<waveblock start="0">
+					<simpleblockfile filename="e00008d0.au" len="47243" min="-0.408833" max="0.632012" rms="0.075646"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="B3-650" channel="2" linked="0" mute="1" solo="0" height="150" minimized="0" isSelected="1" rate="11025" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="49895">
+				<waveblock start="0">
+					<simpleblockfile filename="e0000d6f.au" len="49895" min="-0.4406" max="0.519075" rms="0.118525"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="B3-325" channel="2" linked="0" mute="1" solo="0" height="150" minimized="0" isSelected="1" rate="11025" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="42823">
+				<waveblock start="0">
+					<simpleblockfile filename="e000054f.au" len="42823" min="-0.1893" max="0.254263" rms="0.034084"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="G3-650" channel="2" linked="0" mute="1" solo="0" height="150" minimized="0" isSelected="1" rate="11025" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="51039">
+				<waveblock start="0">
+					<simpleblockfile filename="e0000add.au" len="51039" min="-0.158958" max="0.306212" rms="0.068717"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="G3-325" channel="2" linked="0" mute="1" solo="0" height="150" minimized="0" isSelected="1" rate="11025" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="50048">
+				<waveblock start="0">
+					<simpleblockfile filename="e0000622.au" len="50048" min="-0.211733" max="0.237229" rms="0.054559"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="D3-650" channel="2" linked="0" mute="1" solo="0" height="150" minimized="0" isSelected="1" rate="11025" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="47616">
+				<waveblock start="0">
+					<simpleblockfile filename="e0000dd1.au" len="47616" min="-0.202872" max="0.271808" rms="0.060178"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="D3-325" channel="2" linked="0" mute="1" solo="0" height="150" minimized="0" isSelected="1" rate="11025" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="-0.13000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="61888">
+				<waveblock start="0">
+					<simpleblockfile filename="e0000323.au" len="1433" min="-0.064976" max="0.072299" rms="0.028365"/>
+				</waveblock>
+				<waveblock start="1433">
+					<simpleblockfile filename="e0000746.au" len="60455" min="-0.181968" max="0.187643" rms="0.055591"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="A2-650" channel="2" linked="0" mute="1" solo="0" height="150" minimized="0" isSelected="1" rate="11025" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="56575">
+				<waveblock start="0">
+					<simpleblockfile filename="e0000464.au" len="56575" min="-0.509552" max="0.55652" rms="0.117348"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="A2-325" channel="2" linked="0" mute="1" solo="0" height="150" minimized="0" isSelected="1" rate="11025" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="53888">
+				<waveblock start="0">
+					<simpleblockfile filename="e0000a34.au" len="53888" min="-0.195004" max="0.279276" rms="0.060795"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="E2-650" channel="2" linked="0" mute="1" solo="0" height="150" minimized="0" isSelected="1" rate="11025" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="-0.13000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="1433">
+				<waveblock start="0">
+					<simpleblockfile filename="e0000243.au" len="1433" min="-0.206365" max="0.164136" rms="0.086285"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+		<waveclip offset="-0.00002268" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="54478">
+				<waveblock start="0">
+					<simpleblockfile filename="e000053c.au" len="54478" min="-0.285092" max="0.510213" rms="0.12466"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="1">
+				<controlpoint t="0.000000000000" val="1.000000000000"/>
+			</envelope>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="E2-325" channel="2" linked="0" mute="1" solo="0" height="150" minimized="0" isSelected="1" rate="11025" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="-0.13000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="60184">
+				<waveblock start="0">
+					<simpleblockfile filename="e000023c.au" len="1433" min="-0.382747" max="0.165028" rms="0.187745"/>
+				</waveblock>
+				<waveblock start="1433">
+					<simpleblockfile filename="e00003cd.au" len="58751" min="-0.282685" max="0.356726" rms="0.068258"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+</project>

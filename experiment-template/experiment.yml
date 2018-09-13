@@ -1,0 +1,14 @@
+---
+:name: '20180731'
+:date: 2018-07-31 14:06:14.209327000 -04:00
+:desc: 'interface: Tascam US-122, microphone: NADY CM90'
+:scalelength:
+  :open: 650
+  :fretted: 325
+:fretted_depression: 4.88
+:input_files:
+- Daddario-EJ15-extra-light-650mm-9070g.txt
+- Daddario-EJ40-silk-and-steel-2-650mm-9070g.txt
+- Daddario-EJ16-2-light-650mm-9070g.txt
+- Daddario-EJ17-2-medium-650mm-9070g.txt
+- Martin-M540-2-650mm-9070g.txt

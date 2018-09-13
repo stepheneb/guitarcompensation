@@ -1,0 +1,4 @@
+scale_length = 635
+fret_action_12th = [ 2.0, 2.3, 2.5, 2.6, 2.7, 2.8 ]
+string_height_at_nut = 0
+neck_relief_fret_5 = 0.1
