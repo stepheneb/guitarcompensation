@@ -164,9 +164,14 @@ class StringProject
     path = ARGV[0]
     @pathname = Pathname.new(path)
     @dir = @pathname.dirname
+
+    @guitar = Psych.load_file('guitar-data.yml')
+
+
     @experiment = Psych.load_file(@pathname)
     calc_change_in_fretted_string_length
     @output = <<~HEREDOC
+
       experiment\t#{@experiment[:name]}
       date\t#{@experiment[:date].strftime("%Y-%m-%d %H:%M:%S")}
       description\t#{@experiment[:desc]}
