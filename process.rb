@@ -81,13 +81,14 @@ end
 #
 class Track
   include Convert
-  attr_reader :name, :number, :average_freq, :variance, :stdev, :samples, :sampledata
+  attr_reader :name, :number, :average_frequency, :variance, :stdev, :samples, :sampledata
 
   def initialize trackparsed
     samples_index = trackparsed.find_index { |row| row[0] == "samples" }
     metadata = trackparsed[0..samples_index]
     metadata.each { |row| instance_variable_set("@#{row[0]}", convert(row[1])) }
     @sampledata = SampleData.new(trackparsed[samples_index+1..-1])
+    @average_frequency = @sampledata.average_frequency
   end
 end
 
@@ -104,9 +105,11 @@ end
 #
 class StringSet
   include Convert
-  attr_reader :name, :schema, :sample_time, :sample_step_time, :sample_stop_time, :tracks
+  attr_reader :name, :schema, :sample_time, :sample_step_time, :sample_stop_time, :tracks, :open, :fretted
 
-  def initialize stringsetparsed
+  def initialize stringsetparsed, strings, pitchtable
+    @strings = strings
+    @pitchtable = pitchtable
     tracks_index = stringsetparsed.find_index { |row| row[0] == "tracks" }
     metadata = stringsetparsed[0..tracks_index]
     metadata.each { |row| instance_variable_set("@#{row[0]}", convert(row[1])) }
@@ -116,6 +119,7 @@ class StringSet
     tracklength = samples_index + samples + 2
     @tracks = []
     tracksparsed.each_slice(tracklength) { |trackparsed| @tracks << Track.new(trackparsed) }
+    @strings.each { |string| string[:tracks] = @tracks.slice!(0, 2) }
   end
 
   def datetime
@@ -125,12 +129,14 @@ class StringSet
   def report(display=true)
     output = <<~HEREDOC
       #{@name}
-      string\tfrequency
+      pitch\tfreq\topen\tfretted\t%sharp
       HEREDOC
-    @tracks.each do |track|
-      sd = track.sampledata
-      average_frequency = sprintf("%.2f", sd.average_frequency)
-      output << "#{track.name}\t#{average_frequency}\n"
+    @strings.each do |string|
+      pitchsymbol = string[:pitchsymbol]
+      open = string[:tracks][0].average_frequency
+      fretted = string[:tracks][1].average_frequency
+      sharp = (((fretted/2)/open)-1)*100
+      output << "#{pitchsymbol}\t#{sprintf('%.2f', @pitchtable[pitchsymbol])}\t#{sprintf('%.2f', open)}\t#{sprintf('%.2f', fretted)}\t#{sprintf('%.2f', sharp)}\n"
     end
     if display
       puts output
@@ -150,6 +156,7 @@ end
 
 class StringProject
   attr_accessor :output
+  attr_reader :pitchtable
   def initialize
     if ARGV.length < 1
       raise ArgumentError.new("Please supply path to the experiment yaml file as program argument.")
@@ -169,11 +176,17 @@ class StringProject
       change-in-fretted-string-length\t#{sprintf("%.4f", @change_in_fretted_string_length)}
 
     HEREDOC
+
+    @stringdata = Psych.load_file('string-data.yml')
+    @pitchtable = Psych.load_file('pitch-table.yml')
+
     @stringsets = []
     Dir.chdir(@dir) do
-      @experiment[:input_files].each do |input_file|
-        stringsetparsed = CSV.read(input_file, { :col_sep => "\t" })
-        @stringsets << StringSet.new(stringsetparsed)
+      @experiment[:input_files].each do |dataset|
+        name = dataset[:name]
+        strings = @stringdata[name][:strings]
+        stringsetparsed = CSV.read(dataset[:path], { :col_sep => "\t" })
+        @stringsets << StringSet.new(stringsetparsed, strings, @pitchtable)
       end
       @stringsets.each do |stringset|
         @output << stringset.report(false)

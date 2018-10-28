@@ -7,8 +7,13 @@
   :fretted: 325
 :fretted_depression: 4.88
 :input_files:
-- Daddario-EJ15-extra-light-650mm-9070g.txt
-- Daddario-EJ40-silk-and-steel-2-650mm-9070g.txt
-- Daddario-EJ16-2-light-650mm-9070g.txt
-- Daddario-EJ17-2-medium-650mm-9070g.txt
-- Martin-M540-2-650mm-9070g.txt
+  - :name: Daddario-EJ40-silk-and-steel
+    :path: Daddario-EJ40-silk-and-steel-2-650mm-9070g.txt
+  - :name: Daddario-EJ15-extra-light
+    :path: Daddario-EJ15-extra-light-650mm-9070g.txt
+  - :name: Daddario-EJ16-light
+    :path: Daddario-EJ16-2-light-650mm-9070g.txt
+  - :name: Daddario-EJ17-medium
+    :path: Daddario-EJ17-2-medium-650mm-9070g.txt
+  - :name: Martin-M540-light
+    :path: Martin-M540-2-650mm-9070g.txt
